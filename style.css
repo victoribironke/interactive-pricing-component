@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+:root {
+  --soft-cyan: hsl(174, 77%, 80%);
+  --strong-cyan: hsl(174, 86%, 45%);
+  --light-grayish-red: hsl(14, 92%, 95%);
+  --light-red: hsl(15, 100%, 70%);
+  --pale-blue: hsl(226, 100%, 87%);
+  --white: hsl(0, 0%, 100%);
+  --very-pale-blue: hsl(230, 100%, 99%);
+  --light-grayish-blue-one: hsl(224, 65%, 95%);
+  --light-grayish-blue-two: hsl(223, 50%, 87%);
+  --grayish-blue: hsl(225, 20%, 60%);
+  --dark-desaturated-blue: hsl(227, 35%, 25%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--very-pale-blue);
+  background-image: url("./images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 3rem 0;
+  flex-direction: column;
+}
+
+header {
+  width: 90%;
+  padding: 1.25rem 0rem;
+  max-width: 35rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header img {
+  position: absolute;
+  z-index: 0;
+  width: 45%;
+  max-width: 150px;
+}
+
+.top,
+.mid,
+.down {
+  position: relative;
+  z-index: 1;
+}
+
+.top {
+  font-size: 1.5rem;
+  color: var(--dark-desaturated-blue);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.mid,
+.down {
+  font-size: 1.1rem;
+  color: var(--grayish-blue);
+  font-weight: lighter;
+}
+
+main {
+  width: 90%;
+  max-width: 35rem;
+  background: var(--white);
+  padding: 1.25rem 0;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  width: 100%;
+  height: auto;
+  /* background: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title div {
+  display: none;
+}
+
+.main-title {
+  font-size: 1.05rem;
+  color: var(--grayish-blue);
+  letter-spacing: 0.125rem;
+}
+
+.pricing {
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.price {
+  font-size: 2.3rem;
+  color: var(--dark-desaturated-blue);
+  font-weight: 800;
+}
+
+.frequency {
+  color: var(--grayish-blue);
+  font-size: 1.1rem;
+}
+
+.frequency-toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.monthly,
+.yearly {
+  color: var(--grayish-blue);
+  font-size: 1.1rem;
+}
+
+.selected {
+  color: var(--dark-desaturated-blue);
+}
+
+.toggle {
+  width: 60px;
+  padding: 0.35rem 0.4rem;
+  border-radius: 2rem;
+  background: var(--light-grayish-blue-one);
+}
+
+.toggle:hover {
+  background: var(--soft-cyan);
+}
+
+.toggle div {
+  width: 18px;
+  height: 18px;
+  background: var(--white);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.left {
+  transform: translateX(0);
+}
+
+.right {
+  transform: translateX(30px);
+}
+
+.discount {
+  padding: 0.2rem 0.6rem;
+  text-align: center;
+  border-radius: 2rem;
+  background: var(--light-grayish-red);
+  color: var(--light-red);
+  font-size: 0.8rem;
+  display: none;
+}
+
+.divider {
+  width: 100%;
+  background: var(--light-grayish-blue-two);
+  height: 0.5px;
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.list {
+  padding: 0 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list div {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.list div img {
+  width: 0.75rem;
+}
+
+.list div p {
+  color: var(--grayish-blue);
+  font-weight: 400;
+}
+
+button {
+  width: 60%;
+  max-width: 200px;
+  height: 3rem;
+  border-radius: 100px;
+  border: none;
+  background: var(--dark-desaturated-blue);
+  color: var(--light-grayish-blue-two);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  scale: 1.1;
+  color: var(--white);
+}
+
+@media (width >= 650px) {
+  .bottom {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .discount {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .title {
+    justify-content: space-around;
+  }
+
+  .title div {
+    display: flex;
+  }
+
+  .list {
+    align-items: flex-start;
+    padding: 0;
+  }
+}

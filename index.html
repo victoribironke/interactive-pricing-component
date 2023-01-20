@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <style>
+      .attribution {
+        font-size: 15px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./slider.css" />
+    <script src="./src/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./images/pattern-circles.svg" alt="bg" />
+      <p class="top">Simple, traffic-based pricing</p>
+      <p class="mid">Sign-up for our 30-day trial.</p>
+      <p class="down">No credit card required.</p>
+    </header>
+
+    <main>
+      <div class="title">
+        <p class="main-title">100K PAGEWIEWS</p>
+        <div class="pricing">
+          <p class="price">$100.00</p>
+          <p class="frequency">/ month</p>
+        </div>
+      </div>
+      <div class="slider-div">
+        <div></div>
+        <input type="range" class="slider" min="0" max="100" value="50" />
+      </div>
+      <div class="pricing mobile">
+        <p class="price">$100.00</p>
+        <p class="frequency">/ month</p>
+      </div>
+      <div class="frequency-toggle">
+        <p class="monthly selected">Monthly Billing</p>
+        <div class="toggle"><div class="left"></div></div>
+        <p class="yearly">Yearly Billing</p>
+        <div class="discount">-25%</div>
+      </div>
+      <div class="divider"></div>
+      <div class="bottom">
+        <div class="list">
+          <div>
+            <img src="./images/icon-check.svg" alt="check" />
+            <p>Unlimited websites</p>
+          </div>
+          <div>
+            <img src="./images/icon-check.svg" alt="check" />
+            <p>100% data ownership</p>
+          </div>
+          <div>
+            <img src="./images/icon-check.svg" alt="check" />
+            <p>Email reports</p>
+          </div>
+        </div>
+        <button>Start my trial</button>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://victoribironke.netlify.app">Victor Ibironke</a>.
+    </div>
+  </body>
+</html>
