@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Interactive Price Component](https://your-live-site-url.com)
+- Live Site URL: [Interactive Price Component](https://victoribironke.github.io/interactive-pricing-component/)
 
 ## My process
 
